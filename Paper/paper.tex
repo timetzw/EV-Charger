@@ -1,104 +1,130 @@
-\documentclass[twoside,11pt]{article}
+\documentclass{article}
 
-\usepackage{blindtext}
 
-% Any additional packages needed should be included after jmlr2e.
-% Note that jmlr2e.sty includes epsfig, amssymb, natbib and graphicx,
-% and defines many common macros, such as 'proof' and 'example'.
-%
-% It also sets the bibliographystyle to plainnat; for more information on
-% natbib citation styles, see the natbib documentation, a copy of which
-% is archived at http://www.jmlr.org/format/natbib.pdf
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2023
 
-% Available options for package jmlr2e are:
-%
-%   - abbrvbib : use abbrvnat for the bibliography style
-%   - nohyperref : do not load the hyperref package
-%   - preprint : remove JMLR specific information from the template,
-%         useful for example for posting to preprint servers.
-%
-% Example of using the package with custom options:
-%
-% \usepackage[abbrvbib, preprint]{jmlr2e}
 
-\usepackage{jmlr2e}
+% ready for submission
+\usepackage[preprint]{neurips_2023}
+\usepackage{graphicx}
+
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2023}
 
-% Definitions of handy macros can go here
 
-\newcommand{\dataset}{{\cal D}}
-\newcommand{\fracpartial}[2]{\frac{\partial #1}{\partial  #2}}
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2023}
 
-% Heading arguments are {volume}{year}{pages}{date submitted}{date published}{paper id}{author-full-names}
 
-\usepackage{lastpage}
-\jmlrheading{23}{2023}{1-\pageref{LastPage}}{}{}{}{}
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2023}
 
-% Short headings should be running head and authors last names
 
-\ShortHeadings{Optimal allocation design for EV chargers in Madison}{Optimal allocation design for EV chargers in Madison}
-\firstpageno{1}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
 
-\begin{document}
 
 \title{Optimal allocation design for EV chargers in Madison}
 
-\author{\name Zhengwei Tong \email ztong33@wisc.edu \\
-       \addr Department of Mathematics\\
-       University of Wisconsin-Madison\\
-       Madison, WI 53706, USA
-       \AND
-       \name Michael C. Ferris \email ferris@cs.wisc.edu \\
-       \addr Department of Computer Science\\
-       University of Wisconsin-Madison\\
-       Madison, WI 53706, USA}
 
-% \editor{}
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{%
+  Zhengwei Tong\\
+  Department of Mathematics\\
+  University of Wisconsin-Madison\\
+  Madison, WI 53706 \\
+  \texttt{ztong33@wisc.edu} \\
+  \And
+    Michael C. Ferris \\
+    Department of Computer Science\\
+    University of Wisconsin-Madison\\
+    Madison, WI 53706 \\
+    \texttt{ferris@cs.wisc.edu}
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+
+\begin{document}
+
 
 \maketitle
 
-\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
-\input{section/abstract.tex}
-\end{abstract}
-
-% \begin{keywords}
-%   keyword one, keyword two, keyword three
-% \end{keywords}
+\input{section/0_abstract.tex}
 
 \section{Introduction}
 
-\input{section/intro.tex}
+
+\input{section/1_intro.tex}
 
 \section{Model}
-\input{section/model.tex}
+\input{section/2_model.tex}
 
-\section{Traffic Scenario}
-\input{section/traffic.tex}
+\section{Case Study}
+\input{section/3_application.tex}
 
-\section{Price Scenario}
-\input{section/price.tex}
+\section{Conclusion}
+\input{section/4_discussion.tex}
 
-\section{Application}
-\input{section/application.tex}
+\section*{References}
 
+TEST
 
-% Acknowledgements and Disclosure of Funding should go at the end, before appendices and references
-
-% \acks{test}
-
-% Manual newpage inserted to improve layout of sample file - not
-% needed in general before appendices/bibliography.
-
-\newpage
-
-\appendix
-\section*{Appendix A.}
-\label{app:theorem}
+\medskip
 
 
 
-\vskip 0.2in
-\bibliography{paper}
+{
+\small
+
+
+[1] Alexander, J.A.\ \& Mozer, M.C.\ (1995) Template-based algorithms for
+connectionist rule extraction. In G.\ Tesauro, D.S.\ Touretzky and T.K.\ Leen
+(eds.), {\it Advances in Neural Information Processing Systems 7},
+pp.\ 609--616. Cambridge, MA: MIT Press.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \end{document}
