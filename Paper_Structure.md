@@ -3,7 +3,11 @@
 - Background on electric vehicles (EVs) and their increasing prevalence.
 - Importance of efficient charger allocation for EVs.
 - Brief overview of current methodologies and their limitations for EV charger allocation.
-- Statement of the problem.
+- Statement of the problem. 
+  - (who is the model for) different perspective 
+  - broader perspective can arise more question w.r.t. EV
+  - limit to some of the problems
+
 - Purpose of the paper
 
 **II. Methodology and Model Formulation**
@@ -14,7 +18,7 @@
 - Explanation of any assumptions made in the model.
 - Explanation of how the model will be validated.
 - Detailed formulation of the model, including mathematical equations and algorithms.
-- Discussion of how different variables or parameters affect the model.
+- Discussion of how different variables or parameters affect the model. 
 
 **III . Case Study / Empirical Analysis**
 

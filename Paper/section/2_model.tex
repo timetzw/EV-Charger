@@ -101,7 +101,7 @@ Let the threshold be denoted by $p$ and the decrement amount by $\delta_p$. The 
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Evaluation Model}
+\subsubsection{Evaluation Model}
 Our evaluation model takes into account perspectives from both drivers and infrastructure designers. From the driver's perspective, primary considerations include the successful service rate, preference satisfaction, and the cost of charging. Conversely, from the designer's viewpoint, the primary concern lies with the utilization rate of the chargers.
 
 In greater detail, the driver-centric considerations are as follows:
@@ -136,3 +136,11 @@ The lower half showcases statistical attributes of the experiment, where the x-a
 
 The outcomes of this baseline test are sensible since we nullify all randomness and manually direct drivers to select the second parking lot. All drivers flood towards a single parking lot, and the efficiency rate is high when we allocate more chargers to one parking lot. This is because new cars continuously arrive for charging, reducing the likelihood of chargers remaining idle. The symmetry of the green and red lines is logical since it demonstrates consistent outcomes when the order of charger assignment is reversed. The red line remains constant because we eliminate the leaving mechanism. Thus, all drivers persist in waiting for service until the observation concludes, rendering the satisfaction score constant as they all select the same parking lot.
 
+\subsubsection{Randomness Test}
+The randomness test is conducted to ensure that our model is capable of generating reasonable results when random factors are introduced. We first test the situation where we allow the leaving system to work. We implement a policy that biases driver preference towards a specific parking lot over the others. The experiment operates under settings of 2 parking lots, 20 chargers, 70 drivers, 40 observed time units, and a charging time of 30 time units. The resulting data is demonstrated in Figure \ref{fig:stay_randomness}.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figure/stay_randomness.png}
+    \caption{Stay Randomness Test}
+    \label{fig:stay_randomness}
+\end{figure}
